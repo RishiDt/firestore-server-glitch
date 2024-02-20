@@ -23,11 +23,11 @@ expressApp.post('/sendNotification', async (req,res)=>{
  receiverId = req.body.receiverId;
  startTime = req.body.startTime;
  endTime = req.body.endTime;
- reqFlag = req.body.req;
- message =`${userId} has requested your location at time ${locTime}`;
+ reqFlag = req.body.reqFlag;
+ message =`${userId} has requested your location at time ${startTime}`;
 
  //this sets field name to $notId and content to {msg, ltime}
- notId = Math.floor(Math.random() * 100);
+ notId = Math.floor(Math.random() * 100).toString();
  console.log("notId ",notId);
 
 
