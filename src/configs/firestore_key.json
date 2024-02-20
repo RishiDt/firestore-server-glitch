@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "srestham-education-trust",
+    "private_key_id": "f703541aec3277aed0a8e370ff08ed1657c20b18",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCS+pA9jACn8ZoQ\nsrHJjmauZFhXNAyMexw3hP6LjhHLhZ9x+y06FZifFFh9aSmLm9LkUP5JYjNjorOG\nqL5mcU7ej2qmYlvM1sns8sGVMdtVY3sJMg8W0rtv0XERBRPhWtvd5bS/c2wGYiay\nMgqcYGlzhe1QikjqJZa/Go15HQBB18vYWPkL5uPMng4kDMQjf8BG+4iBhg5hv1iY\nH3YrLgTQmn40R3KgJfmuyQD7fHB0j+Ght2OF5wbFY/LyZEfycRY77YgrLGUsvwiG\ndvGj4NGFAjd30RRFBrN2FGwL9eJ/qVyUC6/Cy2rbDy8YvEkTnmM6YkObCXdGlyID\nZNVpwK1ZAgMBAAECggEAAYCgD+xVjIycxZrlzRtc63vr6olJoUYNZT9Ihh4m5v/Z\nsblSLn4HVCH4EYvJpBX3mEQyE0BTG1nd/ncUCi7ZeUDdTkyGPHV9rkrhCSCojT/q\nvEs7MTphmfx5uuVoGZrCilzwE/Bu2LexDW8TYaoJlQfikelLTURw2XsO9rFMk1wo\nqHg7CshCQ+403hyLDl+rDCCjOFMogbcso5iXS5L5IC/0VU5yN4uFK1iRs203ww+v\nOngFvmX0Iny3Gjh9Ne6GaVifQKTzLCqRgl29zM1gM4xbzNX+ixIeZRkKIhIIUQbv\n2TU/d64CmHCHxERQV5BL3n5rJAJfpLpe3BuJ5kSdcQKBgQDF7AG4dFZDarAv61oE\n170ztQeuMk/BcxHn3lx3OGZdWVvUt/K6tfG+gShTLgwfJaZ2D31gsEmeZK3xws0/\nd9J0mfl7QoAbtPZ+okBCiZI7D7tvip0UQpj7C9W7BnwPlAnYnykJX4SdWu82JJwa\nklKxOnSJAmgZwmqUUDlGosngCQKBgQC+G661JwY8LoW201iUj6KF2tTWJZtHYZ5a\nokokLhUfnFK4pmFk38etew5AocY+7wdJEWKULhJDUWSVCpLJdTo/66NqUTgsfOMe\nqQU/CDHfo2leVjqs0uHAjEz3BpdA/6QgmGvIfnK4158duz94Jh2YRothTRXbOB1G\n+imz6DAW0QKBgEhuhnKqoKcrdC8VQmxjR6qUparqXqW9JuBkUBKRYWToPuMqLnqF\n+2JsggVu5KDBdpneMVQhL8/3qHDBibugbjSd5N9nBtsc7tiJKFsxXYKfz0iSwcmY\nVcQKIL3BMcXBt5i/JpV3j2DG1qRJ4ZcX1YtmiR9a8h37OGXutgdTq+2BAoGAfRoM\nawtmL/5RYdFMjl7DDaDGxLF0sJGNuojnj01/+xBM41Qh7VbRuNistV1/7vQu8Cdv\nnqF+xSvvq6CMneP11BCFtjYCaEw6zXdei28iGtAXS8wkyovvoVzyXPDKYiyYXhbP\nft2vMvI5tD//cVpryURK/lnS0zLnGUkQXmKiGrECgYEArE7YOq+6LKT1vousL/yv\nWsQqxfNlGstLDVsQyT2hl7hbvfqy65wfGm3u99wiRuqNNc/sixVZE3MStRo+iSHh\nAJTncBkqCz/5QNGjYAcbg+/FsKLgd+UqZ/x5zBRIIZqbQxqz2Qx3hdOBY3zGGgNm\nHH8wbaMvTIM4DZMjcusH7pU=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-2bh7d@srestham-education-trust.iam.gserviceaccount.com",
+    "client_id": "115543187425941853590",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-2bh7d%40srestham-education-trust.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
