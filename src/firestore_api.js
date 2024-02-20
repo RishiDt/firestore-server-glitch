@@ -27,19 +27,19 @@ expressApp.post('/sendNotification', async (req,res)=>{
  message =`${userId} has requested your location at time ${startTime}`;
 
  //this sets field name to $notId and content to {msg, ltime}
- notId = Math.floor(Math.random() * 100).toString();
- console.log("notId ",notId);
+ notificationId = Math.floor(Math.random() * 100).toString();
+ console.log("notId ",notificationId);
 
 
     //addding to document
     const response = await firestoreDb.collection('notifications').doc(receiverId).set(
       {
-        [notId]: {
-            msg : message,
-            sTime :startTime ,
-            eTime :endTime ,
-            senderId : userId,
-            req : reqFlag
+        [notificationId]: {
+            "message" : message,
+            "startTime" :startTime ,
+            "endTime" :endTime ,
+            "senderId" : userId,
+            "reqFlag" : reqFlag
          }
 
       },
@@ -76,6 +76,7 @@ try{
    const collectionRef = firestoreDb.collection('notifications');
       const snapshot = await collectionRef.get();
       const documents = [];
+    
       snapshot.forEach((doc) => {
          console.log(doc.id);
         documents.push(doc.id);
@@ -110,23 +111,37 @@ const senderId = Object.values(notification)[0]['senderId'];
  console.log(senderId);
 approved = false;
 try{
- if(userResponse ='approve'){
+ if(userResponse ='APPROVE'){
    console.log("user allowed perm");
 
-   const response = await firestoreDb.collection('notifications').doc(senderId).set(
+    firestoreDb.collection('notifications').doc(senderId).set(
      { [key]: {
          msg :`${userId} has accepted your request to share location`,
       
       }},
    { merge: true })
-    .then(() => {
-      console.log('Data added to the document. ',response);
+    .then((value) => {
+      console.log('Data added to the document. ',value);
       
     })
     .catch((error) => {
       console.error('Error adding data to document:', error);
       
     });
+
+    //adding sender to users availablesender list
+
+    firestoreDb.collection('availableSenders').doc(senderId).set(
+      {"senders": [userId]},
+    { merge: true })
+     .then((value) => {
+       console.log('Data added to the document. ',value);
+       
+     })
+     .catch((error) => {
+       console.error('Error adding data to document:', error);
+       
+     });
     approved=true;
  }else{
    console.log("user denied perm");
@@ -154,12 +169,12 @@ try{
    console.log(response);
 if(approved){
    res.send({
-      msg:"approved."
+      message:"approved."
    })
 }
 }catch(error){
 res.send({
-   msg:`erro ${error}`
+   message:`erro ${error}`
 });
 }
  }
@@ -203,15 +218,33 @@ expressApp.post("/sendLocation",async (req,res)=>{
 })
 
 
-expressApp.post('/getLocations', async (req,res)=>{
-   console.log("request recieved in location");
+expressApp.post('/availableSenders', async (req,res)=>{
+   console.log("request recieved in availableSenders");
 console.log(req.body);
 userId = req.body.userId;
 
 try{
-   const response = (await firestoreDb.collection('locations').doc(userId).get()).data();
+   const response = (await firestoreDb.collection('availableSenders').doc(userId).get()).data();
    console.log("response ",response);
-   res
+   
+   
+res.send(response);
+}catch(error){
+res.send(error);
+}
+}
+);
+
+expressApp.post('/removeSender', async (req,res)=>{
+   console.log("request recieved in availableSenders");
+console.log(req.body);
+userId = req.body.userId;
+receiverId= req.body.receiverId;
+
+try{
+   const response = (await firestoreDb.collection('availableSenders').doc(receiverIdId).get()).data();
+   console.log("response ",response);
+   
    
 res.send(response);
 }catch(error){
