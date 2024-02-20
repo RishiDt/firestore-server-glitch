@@ -21,7 +21,8 @@ expressApp.post('/sendNotification', async (req,res)=>{
  console.log(req.body);
  userId = req.body.userId;
  receiverId = req.body.receiverId;
- locTime = req.body.locTime;
+ startTime = req.body.startTime;
+ endTime = req.body.endTime;
  reqFlag = req.body.req;
  message =`${userId} has requested your location at time ${locTime}`;
 
@@ -35,7 +36,8 @@ expressApp.post('/sendNotification', async (req,res)=>{
       {
         [notId]: {
             msg : message,
-            ltime : locTime,
+            sTime :startTime ,
+            eTime :endTime ,
             senderId : userId,
             req : reqFlag
          }
